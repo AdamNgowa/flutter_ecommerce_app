@@ -1,16 +1,14 @@
-# flutter_ecomm_app
+A fully fledged flutter ecommerce app, with the following features :
+    - Multiple sign-in methods
+    - Onboarding screen(s)
+    - Wishlist
+    - Cart
+    - Checkout (Payment methods,addresse.t.c)
+    - Home screen
+    - Store screen
+    - State management
+    - Themes
+    - Light and dark mode
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Duma Technologies
+        
