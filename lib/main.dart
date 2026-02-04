@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: Scaffold(body: Center(child: Text('This is the start'))),
+      home: Scaffold(body: Center(child: Text('Center'))),
     );
   }
 }
