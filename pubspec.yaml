@@ -8,6 +8,15 @@ version: 1.0.0+1
 environment:
   sdk: ^3.10.8
 
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#272727"
+  image: assets/logos/t-store-splash-logo-light.png
+  image_dark: assets/logos/t-store-splash-logo-dark.png
+  android: true
+  ios: true
+  web: false
+
 #------ PACKAGES ------S#
 
 dependencies:
@@ -25,6 +34,7 @@ dependencies:
   url_launcher: ^6.3.2
   logger: ^2.6.2
   get_storage: ^2.1.1
+  flutter_native_splash: ^2.4.7
 
   #Product specific
 
