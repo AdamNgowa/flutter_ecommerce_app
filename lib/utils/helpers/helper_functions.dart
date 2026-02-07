@@ -34,27 +34,31 @@ class THelperFunctions {
   }
 
   static void showSnackBar(String message) {
-    ScaffoldMessenger.of(
-      Get.context!,
-    ).showSnackBar(SnackBar(content: Text(message)));
+    if (Get.context != null) {
+      ScaffoldMessenger.of(
+        Get.context!,
+      ).showSnackBar(SnackBar(content: Text(message)));
+    }
   }
 
   static void showAlert(String title, String message) {
-    showDialog(
-      context: Get.context!,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(title),
-          content: Text(message),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text('OK'),
-            ),
-          ],
-        );
-      },
-    );
+    if (Get.context != null) {
+      showDialog(
+        context: Get.context!,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text(title),
+            content: Text(message),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
+    }
   }
 
   static void navigateToScreen(BuildContext context, Widget screen) {
@@ -74,15 +78,24 @@ class THelperFunctions {
   }
 
   static Size screenSize() {
-    return MediaQuery.of(Get.context!).size;
+    if (Get.context != null) {
+      return MediaQuery.of(Get.context!).size;
+    }
+    return Size.zero;
   }
 
   static double screenHeight() {
-    return MediaQuery.of(Get.context!).size.height;
+    if (Get.context != null) {
+      return MediaQuery.of(Get.context!).size.height;
+    }
+    return 0;
   }
 
   static double screenWidth() {
-    return MediaQuery.of(Get.context!).size.width;
+    if (Get.context != null) {
+      return MediaQuery.of(Get.context!).size.width;
+    }
+    return 0;
   }
 
   static String getFormattedDate(
