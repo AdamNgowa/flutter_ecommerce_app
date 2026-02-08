@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/state_manager.dart';
 
@@ -5,12 +6,38 @@ class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find();
 
   //Variables
-  //Update page index when page scroll
-  void updatePageIndicator(int index) {}
+  //   Controls a PageView widget.
+  // Allows you to:
+  // Jump to pages
+  // Animate between pages
+  // Listen to page changes
+  final pageController = PageController();
+  //   A reactive integer using GetX.
+  // 0.obs means:
+  // Initial value = 0
+  // Wrapped in an Rx object so the UI can automatically rebuild when it changes.
+  // Stores the currently visible onboarding page index.
+  Rx<int> currentPageIndex = 0.obs;
+  //Update page index when page scroll, Called when user swipes between pages
+  void updatePageIndicator(index) => currentPageIndex.value = index;
   //Jump to the specific dot selected page
-  void dotNavigationClick(int index) {}
+  void dotNavigationClick(index) {
+    currentPageIndex.value = index;
+    pageController.jumpToPage(index);
+  }
+
   //Update current index and jump to the next page
-  void nextPage() {}
+  void nextPage() {
+    if (currentPageIndex.value == 2) {
+    } else {
+      int page = currentPageIndex.value + 1;
+      pageController.jumpToPage(page);
+    }
+  }
+
   //update current index and jump to the last page
-  void skipPage() {}
+  void skipPage() {
+    currentPageIndex.value = 2;
+    pageController.jumpToPage(2);
+  }
 }
