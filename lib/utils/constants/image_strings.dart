@@ -16,4 +16,18 @@ class TImages {
       "assets/images/onboarding_images/onboarding_image_2.png";
   static const String onboardingImage3 =
       "assets/images/onboarding_images/onboarding_image_3.png";
+
+  // -- Animations
+  static const String productsIllustration =
+      "assets/images/animations/workout.gif";
+  static const String productsSaleIllustration =
+      "assets/images/animations/sale.png";
+  static const String staticSuccessIllustration =
+      "assets/images/animations/success.png";
+  static const String deliveredInPlaneIllustration =
+      "assets/images/animations/come-back-later.png";
+  static const String deliveredEmailIllustration =
+      "assets/images/animations/man-receives-mail.png";
+  static const String verifyIllustration =
+      "assets/images/animations/travel-backpack-with-passport-and-air-ticket.gif";
 }
