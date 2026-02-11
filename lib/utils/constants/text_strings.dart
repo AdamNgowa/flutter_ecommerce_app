@@ -61,4 +61,6 @@ class TTexts {
   static const String yourAccountCreatedSubTitle =
       "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
   static const String tContinue = "continue";
+  static const String submit = "submit";
+  static const String done = "done";
 }

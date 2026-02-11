@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecomm_app/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 import 'package:flutter_ecomm_app/utils/constants/text_strings.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/state_manager.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -25,7 +28,7 @@ class ForgetPassword extends StatelessWidget {
               TTexts.forgetPasswordSubTitle,
               style: Theme.of(context).textTheme.labelMedium,
             ),
-            const SizedBox(height: TSizes.spaceBtwSections * 2),
+            SizedBox(height: TSizes.spaceBtwSections * 2),
             //Text field
             TextFormField(
               decoration: InputDecoration(
@@ -33,7 +36,15 @@ class ForgetPassword extends StatelessWidget {
                 prefix: Icon(Iconsax.direct_right),
               ),
             ),
+            SizedBox(height: TSizes.spaceBtwSections),
             //Submit buttons
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => Get.off(() => ResetPasswordScreen()),
+                child: Text(TTexts.submit),
+              ),
+            ),
           ],
         ),
       ),
