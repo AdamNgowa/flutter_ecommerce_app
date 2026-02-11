@@ -5,7 +5,6 @@ import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 import 'package:flutter_ecomm_app/utils/constants/text_strings.dart';
 import 'package:flutter_ecomm_app/utils/helpers/helper_functions.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
