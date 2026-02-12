@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecomm_app/features/shop/screens/home/home.dart';
+
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
@@ -36,10 +38,5 @@ class NavigationMenu extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [
-    Container(color: Colors.amber),
-    Container(color: Colors.red),
-    Container(color: Colors.blue),
-    Container(color: Colors.purple),
-  ];
+  final screens = [HomeScreen()];
 }
