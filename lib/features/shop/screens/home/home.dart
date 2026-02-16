@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecomm_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:flutter_ecomm_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:flutter_ecomm_app/common/widgets/texts/section_heading.dart';
 import 'package:flutter_ecomm_app/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:flutter_ecomm_app/features/shop/screens/home/widgets/home_widgets.dart';
+import 'package:flutter_ecomm_app/utils/constants/colors.dart';
+import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +20,29 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             TPrimaryHeaderContainer(
-              child: Column(children: const [SizedBox(height: 20)]),
+              child: Column(
+                children: [
+                  SizedBox(height: TSizes.appBarHeight * 2),
+                  TSearchContainer(text: "Search in Store"),
+                  SizedBox(height: TSizes.spaceBtwSections),
+                  Padding(
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        //Heading
+                        TSectionHeading(
+                          title: "Popular Categories",
+                          showActionButton: false,
+                          textColor: TColors.white,
+                        ),
+                        SizedBox(height: TSizes.spaceBtwItems),
+                        //Categories
+                        THomeCategories(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
