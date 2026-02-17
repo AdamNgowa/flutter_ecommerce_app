@@ -33,7 +33,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
                   backgroundColor: TColors.textWhite.withValues(alpha: 0.1),
                 ),
               ),
-              SizedBox(child: child),
+              Container(child: child),
             ],
           ),
         ),
