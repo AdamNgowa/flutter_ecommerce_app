@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecomm_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 
 class TGridLayout extends StatelessWidget {
