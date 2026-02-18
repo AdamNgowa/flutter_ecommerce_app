@@ -25,13 +25,13 @@ class TProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           color: dark ? TColors.darkerGrey : TColors.white,
+          borderRadius: BorderRadius.circular(TSizes.productImageRadius),
         ),
         child: Column(
           children: [
             //thumbnail,wishlist button and discount tag
             TRoundedContainer(
               height: 180,
-              padding: EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
@@ -99,34 +99,36 @@ class TProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TProductPriceText(price: "35.0", isLarge: true),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: dark ? TColors.light : TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              TSizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: SizedBox(
-                          height: TSizes.iconLg * 1.2,
-                          width: TSizes.iconLg * 1.2,
-                          child: Icon(
-                            Iconsax.add,
-                            color: dark ? TColors.dark : TColors.light,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
+            ),
+            Spacer(),
+            //price row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(price: "35.0", isLarge: true),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: dark ? TColors.light : TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: SizedBox(
+                    height: TSizes.iconLg * 1.2,
+                    width: TSizes.iconLg * 1.2,
+                    child: Icon(
+                      Iconsax.add,
+                      color: dark ? TColors.dark : TColors.light,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
