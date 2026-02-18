@@ -3,6 +3,7 @@ import 'package:flutter_ecomm_app/common/styles/shadows.dart';
 import 'package:flutter_ecomm_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_ecomm_app/common/widgets/icons/t_circular_icon.dart';
 import 'package:flutter_ecomm_app/common/widgets/images/t_rounded_image.dart';
+import 'package:flutter_ecomm_app/common/widgets/texts/product_price_text.dart';
 import 'package:flutter_ecomm_app/common/widgets/texts/product_title_text.dart';
 import 'package:flutter_ecomm_app/utils/constants/colors.dart';
 import 'package:flutter_ecomm_app/utils/constants/image_strings.dart';
@@ -102,11 +103,7 @@ class TProductCardVertical extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '\$35.5',
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
+                      TProductPriceText(price: "35.0", isLarge: true),
                       Container(
                         decoration: BoxDecoration(
                           color: dark ? TColors.light : TColors.dark,
