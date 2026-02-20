@@ -22,7 +22,7 @@ class TProductCardVertical extends StatelessWidget {
       onTap: () {},
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(1),
+        padding: EdgeInsets.all(4),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           color: dark ? TColors.darkerGrey : TColors.white,
