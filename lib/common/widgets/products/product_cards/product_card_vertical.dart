@@ -22,7 +22,7 @@ class TProductCardVertical extends StatelessWidget {
       onTap: () {},
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(4),
+        padding: EdgeInsets.all(1),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           color: dark ? TColors.darkerGrey : TColors.white,
@@ -99,7 +99,7 @@ class TProductCardVertical extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: dark ? TColors.light : TColors.dark,
+                    color: dark ? TColors.dark : TColors.dark,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(TSizes.cardRadiusMd),
                       bottomRight: Radius.circular(TSizes.productImageRadius),
@@ -109,8 +109,8 @@ class TProductCardVertical extends StatelessWidget {
                     height: TSizes.iconLg * 1.2,
                     width: TSizes.iconLg * 1.2,
                     child: Icon(
-                      Iconsax.add,
-                      color: dark ? TColors.dark : TColors.light,
+                      Iconsax.add_copy,
+                      color: dark ? TColors.light : TColors.light,
                     ),
                   ),
                 ),

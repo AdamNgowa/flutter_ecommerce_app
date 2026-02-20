@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecomm_app/features/shop/screens/home/home.dart';
+import 'package:flutter_ecomm_app/features/shop/screens/wishlist/wishlist.dart';
 import 'package:flutter_ecomm_app/features/shop/store.dart';
 
 import 'package:get/get.dart';
@@ -39,5 +40,5 @@ class NavigationMenu extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [HomeScreen(), StoreScreen()];
+  final screens = [HomeScreen(), StoreScreen(), FavouriteScreeen()];
 }

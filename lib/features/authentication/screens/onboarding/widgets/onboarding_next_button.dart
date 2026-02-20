@@ -4,6 +4,7 @@ import 'package:flutter_ecomm_app/utils/constants/colors.dart';
 import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 import 'package:flutter_ecomm_app/utils/device/device_utility.dart';
 import 'package:flutter_ecomm_app/utils/helpers/helper_functions.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class OnBoardingNextButton extends StatelessWidget {
   const OnBoardingNextButton({super.key});
@@ -22,7 +23,7 @@ class OnBoardingNextButton extends StatelessWidget {
           iconSize: 28,
           backgroundColor: dark ? TColors.primary : Colors.black,
         ),
-        child: Icon(Icons.arrow_right),
+        child: Icon(Iconsax.arrow_right_1_copy),
       ),
     );
   }
