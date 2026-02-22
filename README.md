@@ -9,6 +9,7 @@ A fully fledged flutter ecommerce app, with the following features :
     - State management
     - Themes
     - Light and dark mode
+    - firebase authentication,database
+    - cloudinary storage
 
-Duma Technologies
         
