@@ -5,6 +5,9 @@ class TImages {
   static const String lightAppLogo =
       "assets/logos/t-store-splash-logo-light.png";
 
+  //Profile image
+  static const String user = "assets/images/user/user.png";
+
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";
   static const String facebook = "assets/logos/facebook-icon.png";
