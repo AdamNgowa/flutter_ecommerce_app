@@ -1,71 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecomm_app/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:flutter_ecomm_app/common/widgets/images/t_rounded_image.dart';
-import 'package:flutter_ecomm_app/utils/constants/colors.dart';
-import 'package:flutter_ecomm_app/utils/constants/image_strings.dart';
-import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
-import 'package:flutter_ecomm_app/utils/helpers/helper_functions.dart';
+import 'package:flutter_ecomm_app/common/widgets/appbar/appbar.dart';
+import 'package:flutter_ecomm_app/common/widgets/icons/t_circular_icon.dart';
+import 'package:flutter_ecomm_app/features/shop/product_details/widgets/product_details_image_slider.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: TAppBar(
+        showBackArrow: true,
+        actions: [TCircularIcon(icon: Iconsax.heart, color: Colors.red)],
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             //Product Image Slider
-            TCurvedEdgeWidget(
-              child: Container(
-                color: dark ? TColors.darkGrey : TColors.light,
-                child: Stack(
-                  children: [
-                    //Main Large Image
-                    SizedBox(
-                      height: 400,
-                      child: Padding(
-                        padding: const EdgeInsets.all(
-                          TSizes.productImageRadius * 2,
-                        ),
-                        child: Center(
-                          child: Image(
-                            image: AssetImage(TImages.productImage1),
-                          ),
-                        ),
-                      ),
-                    ),
-                    //Image Slider
-                    Positioned(
-                      right: 0,
-                      left: TSizes.defaultSpace,
-                      bottom: 30,
-                      child: SizedBox(
-                        height: 80,
-                        child: ListView.separated(
-                          shrinkWrap: true,
-                          scrollDirection: Axis.horizontal,
-                          physics: AlwaysScrollableScrollPhysics(),
-                          itemBuilder: (_, index) => TRoundedImage(
-                            width: 80,
-                            border: Border.all(color: TColors.primary),
-                            padding: EdgeInsets.all(3),
-                            backgroundColor: dark
-                                ? TColors.dark
-                                : TColors.white,
-                            imageUrl: TImages.productImage1,
-                          ),
-                          separatorBuilder: (_, _) =>
-                              SizedBox(width: TSizes.spaceBtwItems),
-                          itemCount: 6,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            TProductImageSlider(),
             //Product Details Slider
           ],
         ),

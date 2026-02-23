@@ -25,7 +25,7 @@ class TProductCardVertical extends StatelessWidget {
       onTap: () => Get.to(ProductDetailsScreen()),
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(4),
+        padding: EdgeInsets.all(3),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           color: dark ? TColors.darkerGrey : TColors.white,
