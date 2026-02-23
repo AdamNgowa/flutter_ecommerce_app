@@ -6,10 +6,13 @@ import 'package:flutter_ecomm_app/common/widgets/images/t_rounded_image.dart';
 import 'package:flutter_ecomm_app/common/widgets/texts/product_price_text.dart';
 import 'package:flutter_ecomm_app/common/widgets/texts/product_title_text.dart';
 import 'package:flutter_ecomm_app/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
+import 'package:flutter_ecomm_app/features/shop/product_details/product_details.dart';
 import 'package:flutter_ecomm_app/utils/constants/colors.dart';
 import 'package:flutter_ecomm_app/utils/constants/image_strings.dart';
 import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 import 'package:flutter_ecomm_app/utils/helpers/helper_functions.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class TProductCardVertical extends StatelessWidget {
@@ -19,10 +22,10 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(ProductDetailsScreen()),
       child: Container(
         width: 180,
-        padding: EdgeInsets.all(1),
+        padding: EdgeInsets.all(4),
         decoration: BoxDecoration(
           boxShadow: [TShadowStyle.verticalProductShadow],
           color: dark ? TColors.darkerGrey : TColors.white,
@@ -32,7 +35,6 @@ class TProductCardVertical extends StatelessWidget {
           children: [
             //thumbnail,wishlist button and discount tag
             TRoundedContainer(
-              height: 180,
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [

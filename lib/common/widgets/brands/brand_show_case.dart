@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecomm_app/common/widgets/brands/brand_card.dart';
 import 'package:flutter_ecomm_app/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:flutter_ecomm_app/common/widgets/images/t_rounded_image.dart';
 import 'package:flutter_ecomm_app/utils/constants/colors.dart';
+import 'package:flutter_ecomm_app/utils/constants/image_strings.dart';
 import 'package:flutter_ecomm_app/utils/constants/sizes.dart';
 import 'package:flutter_ecomm_app/utils/helpers/helper_functions.dart';
 
@@ -35,13 +37,15 @@ class TBrandShowcase extends StatelessWidget {
 Widget brandTopProductImageWidget(String image, context) {
   return Expanded(
     child: TRoundedContainer(
-      height: 100,
       backgroundColor: THelperFunctions.isDarkMode(context)
           ? TColors.darkGrey
           : TColors.light,
       margin: EdgeInsets.only(right: TSizes.sm),
-      padding: EdgeInsets.all(TSizes.sm),
-      child: Image(image: AssetImage(image), fit: BoxFit.contain),
+      padding: EdgeInsets.all(3),
+      child: TRoundedImage(
+        imageUrl: TImages.productImage1,
+        applyImageRadius: true,
+      ),
     ),
   );
 }
