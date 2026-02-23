@@ -18,6 +18,8 @@ class TTexts {
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarSubTitle = "Adam Masha";
 
+  //Duma email
+  static const String dumaEmail = "support@dumatechnologies.com";
   // -- Authentication Form Text
   static const String firstName = "First Name";
   static const String lastName = "Last Name";

@@ -42,7 +42,7 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
               SizedBox(height: TSizes.spaceBtwItems),
               Text(
-                'support@dumatechnologies.com',
+                TTexts.dumaEmail,
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
